@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{pages/authentication/layout/index}">
+
+<head>
+    <title >Login</title>
+    <meta name="robots" content="noindex, nofollow"/>
+</head>
+
+<th:block layout:fragment="content">
+
+    <!-- Login -->
+    <div class="d-flex w-100 col-12 col-lg-5 align-items-center p-sm-5 p-4">
+        <div class="w-px-500 mx-auto">
+            <h3 class="mb-1 fw-bold" >Log in</h3>
+            <p class="mb-4">Log in by entering your email address and password.</p>
+
+            <form method="POST" th:action="@{/login}">
+                <div class="mb-3">
+
+                    <label for="username" class="form-label">Email address</label>
+                    <input type="text" class="form-control" id="username" name="username" autofocus>
+                </div>
+                <div class="mb-3 form-password-toggle">
+                    <label class="form-label" for="password">Password</label>
+                    <div class="input-group input-group-merge">
+                        <input type="password" id="password" class="form-control" name="password"
+                               placeholder="············">
+                        <span class="input-group-text"><i class="ti ti-eye-off cursor-pointer"></i></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary d-grid w-100 waves-effect waves-light">Log in</button>
+                <input type="hidden">
+            </form>
+        </div>
+    </div>
+</th:block>
+
+<th:block layout:fragment="extra-js">
+    <script type="application/javascript">
+        const url = new URL(window.location.href);
+        url.searchParams.forEach((v, key) => url.searchParams.delete(key));
+        history.replaceState(null, null, url);
+    </script>
+</th:block>
+
+</html>

@@ -1,0 +1,198 @@
+<link rel="shortcut icon" type="image/png" href="/app-assets/images/favicon/favicon.ico"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+      rel="stylesheet">
+
+<!-- BEGIN: Vendor CSS-->
+<!--<link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/select/select2.min.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css"/>-->
+<link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
+<link rel="stylesheet" href="/assets/vendor/libs/node-waves/node-waves.css"/>
+<link rel="stylesheet" href="/assets/vendor/libs/select2/select2.css"/>
+<link rel="stylesheet" href="/assets/vendor/libs/flatpickr/flatpickr.css"/>
+<link rel="stylesheet" href="/assets/vendor/libs/toastr/toastr.css">
+<link rel="stylesheet" href="/assets/vendor/libs/spinkit/spinkit.css" />
+<link rel="stylesheet" href="/assets/vendor/libs/animate-css/animate.css" />
+<link rel="stylesheet" href="/assets/vendor/libs/sweetalert2/sweetalert2.css" />
+<!-- END: Vendor CSS-->
+
+<!-- BEGIN: Theme CSS-->
+<link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/bootstrap-extended.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/colors.css" />
+<link rel="stylesheet" type="text/css" href="/app-assets/css/components.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/themes/dark-layout.min.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/themes/bordered-layout.min.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/themes/semi-dark-layout.min.css"/>
+<!-- END: Theme CSS-->
+
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu.css"/>
+<link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/forms/pickers/form-flat-pickr.css"/>
+<!-- END: Page CSS-->
+
+<!-- BEGIN: Custom CSS-->
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/js/toastr/toastr.css" />
+<!-- END: Custom CSS-->
+
+<style>
+    .calendar-cell{
+        padding-left: 0.2rem !important;
+        padding-right: 0.2rem !important;
+    }
+    .calendar-input{
+        width: 2.3em;
+        border: 0;
+        text-align: center;
+    }
+    .calendar-input:focus{
+        outline:none
+    }
+    .display-flex{
+        display: flex;
+    }
+    .col-lg-18p {
+        flex: 0 0 18%;
+        max-width: 18%;
+    }
+    .flex-column-end{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .col-sm-10p {
+        flex: 0 0 10%;
+        max-width: 10%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .col-sm-7p{
+        flex: 0 0 7%;
+        max-width: 7%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .col-sm-20p{
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .col-xlg-16 {
+        flex: 0 0 16.66%;
+        max-width: 16.66%;
+    }
+    .zoom-icon{
+        width: 26px;
+        height: 26px;
+        opacity: 0;
+        color: rebeccapurple;
+    }
+
+    .image-wrap :hover .zoom-icon{
+        opacity: 1;
+    }
+    .image-wrap {
+        display:inline-block;
+        position:relative;
+        padding-left: 1rem;
+    }
+    .trash-button{
+        position: absolute;
+        right: 0;
+        color: red;
+    }
+    .zoom-button{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        left: 5px;
+        top: 0;
+        bottom: 0;
+        color: rebeccapurple;
+    }
+    .offset-md-0-5{
+        margin-right: 4%;
+    }
+    .opacity-zero{
+        opacity: 0;
+    }
+
+    .popup23{
+        max-height:50vh;
+        overflow:auto;
+    }
+    .calendar-disabled{
+        cursor: not-allowed;
+    }
+    .flatpickr-monthSelect-month.today{
+        background-color: green;
+        color: white;
+    }
+    .cursor-default{
+        cursor:default
+    }
+    .preloaded-content {
+        transition: 0s;
+        opacity: 0;
+    }
+    .action-button{
+        border: 0px;
+        background-color: transparent;
+    }
+    .menu-item .feather {
+        margin-right: 7px !important;
+        flex: 0 0 20px;
+    }
+    .menu-item .menu-title {
+        line-height: 1 !important;
+        white-space: normal;
+    }
+    .menu-item .m-0 {
+        padding: 7px 7px 10px !important;
+    }
+
+    .select2-selection.select2-selection--single.select2-error {
+        border-color: red !important;
+    }
+
+    div.select2-error {
+        border: none !important;
+        color: red;
+        font-weight: 500;
+    }
+
+    .select2-error .select2-selection {
+        border-color: red !important;
+        border-width: 2px;
+    }
+
+    div.select2-text-error {
+        border: none !important;
+        color: red;
+        font-weight: 500;
+    }
+    input[type=number] {
+        -moz-appearance:textfield;
+    }
+
+    .file-block{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .file-element{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin-bottom: 0.5em;
+    }
+
+    .mt-25p{
+        margin-top: 25%;
+    }
+</style>
+

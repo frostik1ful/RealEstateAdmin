@@ -1,0 +1,46 @@
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: 70m
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/realestate_db
+    username: dimatik
+    password: qwerty1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.jdbc.batch_size: 20
+      hibernate.format_sql: true
+      hibernate.generate_statistics: false
+      hibernate.use_sql_comments: true
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    open-in-view: false
+    generate-ddl: true
+    database: postgresql
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+logging:
+  level:
+    root: info
+
+app:
+  login:
+    password:
+      restore:
+        token-expiration: 30 # minutes
+        token-length: 150
+springdoc:
+  swagger-ui:
+    url: /swagger/api.yml
+
+import:
+  path: STORAGE/IMPORT

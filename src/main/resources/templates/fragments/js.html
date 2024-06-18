@@ -1,0 +1,46 @@
+<!-- Core JS -->
+<script src="/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="/assets/vendor/libs/popper/popper.js"></script>
+<script src="/assets/vendor/js/bootstrap.js"></script>
+<script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="/assets/vendor/libs/node-waves/node-waves.js"></script>
+
+<script src="/assets/vendor/libs/hammer/hammer.js"></script>
+
+<script src="/assets/vendor/js/menu.js"></script>
+
+<!-- Vendors JS -->
+<script src="/assets/vendor/libs/toastr/toastr.js"></script>
+<script src="/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<script src="/assets/vendor/libs/select2/select2.js"></script>
+<script th:if="${#locale.language == 'uk'}" src="/assets/vendor/libs/select2/i18n/uk.js"></script>
+<script th:if="${#locale.language == 'uk'}" src="/assets/vendor/libs/flatpickr/l10n/uk.js"></script>
+<script src="/assets/vendor/libs/sortablejs/sortable.js"></script>
+<script src="/assets/vendor/js/dropdown-hover.js"></script>
+<script src="/assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+<!-- Main JS -->
+<script src="/assets/js/main.js"></script>
+
+
+<!-- Common JS-->
+<script src="/js/common.js"></script>
+
+<!-- Sidebar tab activating -->
+<script type="application/javascript">
+
+
+
+    const acceptedFiles = ".jpeg,.jpg,.png," +
+        "application/pdf, .txt, .rtf, .doc, " +
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document," +
+        "application/vnd.ms-excel," +
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet," +
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+
+    //  Set default language for Select2
+    $.fn.select2.defaults.set('language', '[[${#locale.language}]]');
+
+    //  Set default language for Flatpickr
+    flatpickr.localize('[[${#locale.language}]]' === 'uk' ? flatpickr.l10ns.uk : flatpickr.l10ns.en);
+</script>

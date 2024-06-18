@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="layout-navbar-fixed layout-menu-fixed light-style"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="assets/"
+      data-template="vertical-menu-template-no-customizer-starter"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en"
+>
+
+<head>
+    <title layout:title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE" >RealEstate</title>
+    <th:block layout:insert="~{fragments/head}"></th:block>
+</head>
+
+<body>
+<div class="layout-wrapper layout-content-navbar layout-without-navbar">
+
+    <!-- Spinner -->
+    <div class="loader d-flex justify-content-center align-items-center
+                animate__animated animate__fadeOut animate__faster animate__delay-1s" id="spinner">
+        <div class="sk-wave sk-primary ">
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+            <div class="sk-wave-rect"></div>
+        </div>
+    </div>
+    <!-- / Spinner -->
+    <div class="layout-container">
+
+        <!-- Menu -->
+        <th:block layout:replace="~{fragments/sidebar}"></th:block>
+        <!-- / Menu -->
+
+        <div class="layout-page">
+            <div class="content-wrapper">
+
+                <div class="container-xxl flex-grow-1 container-p-y min-width-100p">
+                    <!-- Content -->
+                    <th:block layout:fragment="content"></th:block>
+                    <!-- / Content -->
+                </div>
+
+                <!-- Footer -->
+                <th:block layout:replace="~{fragments/footer}"></th:block>
+                <!-- / Footer -->
+
+                <div class="content-backdrop fade"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+    
+</div>
+
+<!-- Logout Modal -->
+<th:block layout:replace="~{fragments/logout-modal}"></th:block>
+
+<!-- Extra Modals -->
+<th:block layout:fragment="extra-modals"></th:block>
+
+<!-- Common JS -->
+<th:block layout:replace="~{fragments/js}"></th:block>
+
+<!-- Extra JS-->
+<th:block layout:fragment="extra-js"></th:block>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<div class="modal fade" id="logout-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" th:text="#{sidebar.profile.logout}"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" th:text="#{sidebar.logout-modal.text}"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-label-secondary waves-effect" data-bs-dismiss="modal"
+                        th:text="#{pages.users.user.add.cancel-btn}"></button>
+                <form action="/logout" method="POST">
+                    <button type="submit" class="btn btn-primary waves-effect waves-light" th:text="#{sidebar.profile.logout}"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
